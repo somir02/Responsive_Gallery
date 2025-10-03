@@ -25,14 +25,14 @@ const Modal = ({ images, columns = 4 }) => {
 
   return (
     <div className="p-8">
-      <div className="flex flex-wrap justify-around gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {images.map((imgSrc, index) => (
           <div
             key={index}
             className="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 h-64 overflow-hidden rounded-xl"
             onClick={() => openModal(index)}
           >
-            <img src={imgSrc} className="w-full h-full object-cover" />
+            <img src={imgSrc} className="w-full h-full object-cover hover:opacity-70 cursor-pointer" />
           </div>
         ))}
       </div>

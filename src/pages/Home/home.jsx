@@ -11,20 +11,20 @@ const Home = () => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-6 md:p-12 h-full">
-      <div className="w-full flex-1">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-4 p-12 md:p-12 sm:items-center md:items-start h-full">
+      <div className="w-full flex justify-center">
         <img
           src={selectedImage}
-          className="w-full h-64 md:h-full rounded-lg border-3 border-blue-400"
+          className="sm:w-full md:w-full lg:w-full xl:w-[80%] rounded-lg border-3 border-blue-400"
         />
       </div>
 
-      <div className="flex md:flex-col flex-row md:w-64 gap-4 ">
+      <div className="flex md:flex-col flex-row md:w-48 lg:w-64 gap-4 ">
         {images.map((imgsrc, index) => (
           <img
             key={index}
             src={imgsrc}
-            className="h-24 w-24 md:h-32 md:w-full rounded-lg cursor-pointer hover:opacity-80 flex-shrink-0"
+            className="h-24 min-w-24 md:h-32 md:w-full rounded-lg cursor-pointer hover:opacity-80"
             onClick={() => setSelectedImage(imgsrc)}
           />
         ))}
